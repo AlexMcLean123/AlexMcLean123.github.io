@@ -1,12 +1,20 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 {% for file in site.static_files %}
-    {% if file.path contains 'assets/screenshot/' %}
+    {% if file.path contains 'assets/screenshot/screenshot2' %}
         <script>
             $(function() {
                 $(".iphoneScreen").attr('src', '{{ site.github.baseurl }}{{ file.path }}');
                 $(".iphoneScreen").removeClass("hidden");
                 console.log("{{ file.path }}");
+            });
+        </script>
+    {% elsif file.path contains 'assets/screenshot/screenshot1' %}
+        <script>
+            $(function() {
+                $(".featuresPhoneScreen").attr('src', '{{ site.github.baseurl }}{{ file.path }}');
+                $(".featuresPhonePreview").removeClass("hidden");
+                console.log("Features screenshot: {{ file.path }}");
             });
         </script>
     {% elsif file.path contains 'assets/videos/' %}
