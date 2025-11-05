@@ -516,9 +516,10 @@ nav > ul li a:active {
 .featuresWithPhone {
 	grid-area: c;
 	display: flex;
-	gap: 60px;
+	gap: 80px;
 	align-items: flex-start;
-	margin-top: 93px;
+	margin-top: 100px;
+	margin-bottom: 40px;
 }
 
 .features {
@@ -551,10 +552,12 @@ nav > ul li a:active {
 
 .feature {
 	display: flex;
-	padding-top: 63px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-top: 48px;
+	padding-left: 20px;
+	padding-right: 20px;
 	width: calc(100%/3);
+	align-items: flex-start;
+	gap: 16px;
 }
 
 .feature:nth-child(-n+3) {
@@ -577,6 +580,12 @@ nav > ul li a:active {
 	color: $feature-icons-foreground-color;
 }
 
+.feature .fa-stack {
+	flex-shrink: 0;
+	width: 48px;
+	height: 48px;
+}
+
 .socialIconBack {
 	color: $social-icons-background-color;
 }
@@ -586,17 +595,23 @@ nav > ul li a:active {
 }
 
 .featureText {
-	margin-left: 18px;
+	flex: 1;
 }
 
 .featureText > h3 {
 	color: $feature-title-color;
+	font-size: 1.8rem;
+	font-weight: 600;
+	line-height: 1.3;
+	margin-bottom: 10px;
 }
 
 .featureText > p {
 	color: $feature-text-color;
-	margin-top: 8px;
-	line-height: 1.5;
+	margin-top: 0px;
+	line-height: 1.65;
+	font-size: 1.5rem;
+	font-weight: 400;
 }
 
 @media only screen and (max-width: 992px) {
