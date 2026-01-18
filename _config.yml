@@ -13,7 +13,7 @@ presskit_download_link                    :                                     
 app_icon                                  : assets/Icon-App-1024x1024@1x.png          # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
 app_name                                  : ciorcal                                    # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price                                 :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Find housing, discover events, and connect with fellow Irish abroad.
+app_description                           : "Find your ciorcal.<br><i class='fas fa-map-marker-alt'></i> Starting in Vancouver, pending worldwide."
 
 enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
 
