@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Ciorcal - Find Your Community</title>
     <meta name="description" content="The community app for expats and newcomers. Find events, housing, and make meaningful connections in your new city.">
 
@@ -81,6 +81,17 @@
             scroll-behavior: smooth;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background-color: var(--bg-primary);
             font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
@@ -100,10 +111,11 @@
 
         /* Gradient orb */
         .orb {
-            position: absolute;
+            position: fixed;
             border-radius: 50%;
             filter: blur(80px);
             opacity: 0.4;
+            pointer-events: none;
         }
 
         .orb-1 {
@@ -111,7 +123,8 @@
             height: 600px;
             background: radial-gradient(circle, rgba(74, 222, 128, 0.15) 0%, transparent 70%);
             top: -200px;
-            right: -100px;
+            right: 0;
+            transform: translateX(30%);
         }
 
         .orb-2 {
@@ -119,13 +132,15 @@
             height: 400px;
             background: radial-gradient(circle, rgba(74, 222, 128, 0.1) 0%, transparent 70%);
             bottom: 20%;
-            left: -100px;
+            left: 0;
+            transform: translateX(-30%);
         }
 
         .orb-3 {
             width: 800px;
             height: 800px;
             background: radial-gradient(circle, rgba(74, 222, 128, 0.12) 0%, transparent 70%);
+            position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -298,7 +313,7 @@
         }
     </style>
 </head>
-<body class="text-zinc-100 antialiased overflow-x-hidden">
+<body class="text-zinc-100 antialiased overflow-x-hidden min-w-full">
     <!-- Background elements -->
     <div class="grid-pattern"></div>
     <div class="orb orb-1"></div>
